@@ -1,0 +1,61 @@
+/* Estilos personalizados para Cania Connect */
+.navbar-logo {
+    height: 110px;  /* Tamaño del logo */
+    width: auto;   /* Esto hace que no se deforme la imagen */
+    transition: transform 0.3s ease; /* Opcional: para que se vea fluido */
+}
+
+/* Hover effect for navbar logo */
+.navbar-logo:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+/* Color rosa/morado de Cania */
+:root {
+    --rosa-cania: #ab3878;
+    --morado-oscuro: #2d0019;
+}
+
+/* Texto resaltado */
+.text-cania {
+    color: var(--rosa-cania) !important;
+}
+
+/* Botón Principal Rosa */
+.btn-cania {
+    background-color: var(--rosa-cania);
+    color: white;
+    border: none;
+    font-weight: 500;
+}
+
+.btn-cania:hover {
+    background-color: #c4006cd1;
+    color: white;
+}
+
+/* Botón contorno Rosa */
+.btn-outline-cania {
+    border: 2px solid var(--rosa-cania);
+    color: var(--rosa-cania);
+    background: transparent;
+}
+
+.btn-outline-cania:hover {
+    background-color: var(--rosa-cania);
+    color: white;
+}
+
+/* Recuadro oscuro de la sección esencia */
+.bg-cania-dark {
+    background-color: var(--rosa-cania) !important;
+}
+
+/* Estilos de formulario y texto */
+.form-control-dark { border-color: var(--bs-gray); }
+.text-small { font-size: 85%; }
+
+/* Iconos personalizados */
+.bi-check-circle-fill {
+    color: var(--rosa-cania);
+}
