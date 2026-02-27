@@ -13,12 +13,6 @@
 /* Color rosa/morado de Cania */
 :root {
     --rosa-cania: #ab3878;
-    --morado-oscuro: #2d0019;
-}
-
-/* Texto resaltado */
-.text-cania {
-    color: var(--rosa-cania) !important;
 }
 
 /* Botón Principal Rosa */
@@ -51,11 +45,6 @@
     background-color: var(--rosa-cania) !important;
 }
 
-/* Estilos de formulario y texto */
-.form-control-dark { border-color: var(--bs-gray); }
-.text-small { font-size: 85%; }
-
-/* Iconos personalizados */
 .bi-check-circle-fill {
     color: var(--rosa-cania);
 }
