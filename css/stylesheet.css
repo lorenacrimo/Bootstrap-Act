@@ -1,50 +1,145 @@
-/* Estilos personalizados para Cania Connect */
-.navbar-logo {
-    height: 110px;  /* Tamaño del logo */
-    width: auto;   /* Esto hace que no se deforme la imagen */
-    transition: transform 0.3s ease; /* Opcional: para que se vea fluido */
+/* =========================================
+   CONFIGURACIÓN GENERAL Y VARIABLES
+   ========================================= */
+*{
+   font-family: 'Montserrat', sans-serif !important;
 }
-
-/* Hover effect for navbar logo */
-.navbar-logo:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
-}
-
-/* Color rosa/morado de Cania */
 :root {
     --rosa-cania: #ab3878;
+    --rosa-health: #db2d8e;
 }
 
-/* Botón Principal Rosa */
+/* =========================================
+   2. HEADER E IDENTIDAD (ID title)
+   ========================================= */
+#title {
+    background-color: #ff4c68;
+    color: white;
+    padding-bottom: 50px;
+}
+
+
+.main-container {
+    /* Requisito: 3% vertical y 15% lateral */
+    padding: 3% 15% !important;
+}
+
+.app-name {
+    /* Requisito: Fuente Ubuntu */
+    font-family: 'Ubuntu', sans-serif !important;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+/* =========================================
+   3. NAVBAR 
+   ========================================= */
+.navbar {
+    background: rgba(255, 255, 255, 0.2) !important; 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 100px; 
+    margin-bottom: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 25px !important;
+
+    display:flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 50px;
+    width: auto;
+    margin-right: 15px;
+}
+
+.text-health {
+    color: var(--rosa-health) !important;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: 500; 
+    margin: 0 10px;
+    font-size: 1.2rem;
+    padding: 8px 18px !important;
+    display: flex;
+    align-items: center;
+    
+}
+
+/* =========================================
+   4. SECCIÓN HERO (Texto e Imagen)
+   ========================================= */
+.title {
+    color: white
+}
+#title h1 {
+    font-size: 3.5rem; 
+    line-height: 1.2;
+    font-weight: 900;
+    font-family: 'Montserrat bold';
+}
+
+.title-image {
+    max-width: 80%;
+    transform: rotate(25deg);
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+}
+
+/* =========================================
+   5. BOTONES Y UTILIDADES 
+   ========================================= */
 .btn-cania {
     background-color: var(--rosa-cania);
     color: white;
     border: none;
-    font-weight: 500;
+    padding: 10px 25px;
 }
 
-.btn-cania:hover {
-    background-color: #c4006cd1;
-    color: white;
+.text-cania {
+    color: var(--rosa-cania) !important;
 }
 
-/* Botón contorno Rosa */
-.btn-outline-cania {
-    border: 2px solid var(--rosa-cania);
-    color: var(--rosa-cania);
-    background: transparent;
-}
-
-.btn-outline-cania:hover {
-    background-color: var(--rosa-cania);
-    color: white;
-}
-
-/* Recuadro oscuro de la sección esencia */
 .bg-cania-dark {
     background-color: var(--rosa-cania) !important;
 }
+.bg-cania-light {
+    background-color: rgba(171, 56, 120, 0.1) !important;
+}
 
-.bi-check-circle-fill {
-    color: var(--rosa-cania);
+.btn-margin-custom {
+    margin: 5% 3% 5% 0;
+}
+
+.container-fluid{
+    padding-top:3%;
+    padding-bottom:3%;
+    padding-left: 15%;
+    padding-right: 15%;
+
+}
+/* =========================================
+   6. RESPONSIVE (Móvil)
+   ========================================= */
+@media (max-width: 991px) {
+    .main-container {
+        padding: 5% 5% !important;
+    }
+    .app-name {
+        font-size: 1.8rem;
+    }
+    #title h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .title-image {
+        transform: rotate(0deg);
+        max-width: 60%;
+        margin-top: 30px;
+    }
+    .navbar {
+        border-radius: 20px;
+        padding-bottom: 1rem;
+    }
 }
