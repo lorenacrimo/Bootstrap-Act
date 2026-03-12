@@ -1,6 +1,6 @@
-/* =========================================
-   CONFIGURACIÓN GENERAL Y VARIABLES
-   ========================================= */
+
+   /* CONFIGURACIÓN GENERAL */
+   
 *{
    font-family: 'Montserrat', sans-serif !important;
 }
@@ -9,17 +9,15 @@
     --rosa-health: #db2d8e;
 }
 
-/* =========================================
-   2. HEADER E IDENTIDAD (ID title)
-   ========================================= */
+/* HEADER (TITLE) */
+
 #title {
     background-color: #ff4c68;
     color: white;
-    padding-bottom: 50px;
 }
 
 
-.main-container {
+.container-fluid {
     /* Requisito: 3% vertical y 15% lateral */
     padding: 3% 15% !important;
 }
@@ -27,24 +25,17 @@
 .app-name {
     /* Requisito: Fuente Ubuntu */
     font-family: 'Ubuntu', sans-serif !important;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 2.5rem;
 }
+
 
 /* =========================================
    3. NAVBAR 
    ========================================= */
 .navbar {
-    background: rgba(255, 255, 255, 0.2) !important; 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 100px; 
-    margin-bottom: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 10px 25px !important;
-
-    display:flex;
-    align-items: center;
+    padding-bottom: 4.5rem;
+    background: transparent !important;
 }
 
 .navbar-logo {
@@ -60,11 +51,9 @@
 .navbar-nav .nav-link {
     color: white !important;
     font-weight: 500; 
-    margin: 0 10px;
     font-size: 1.2rem;
-    padding: 8px 18px !important;
-    display: flex;
-    align-items: center;
+    padding: 0px 18px !important;
+    
     
 }
 
@@ -82,7 +71,7 @@
 }
 
 .title-image {
-    max-width: 80%;
+    max-width: 60%;
     transform: rotate(25deg);
     filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
 }
@@ -112,19 +101,40 @@
     margin: 5% 3% 5% 0;
 }
 
-.container-fluid{
-    padding-top:3%;
-    padding-bottom:3%;
-    padding-left: 15%;
-    padding-right: 15%;
+/* ESTILOS FEATURES */
 
+#features {
+    padding: 100px 0; /* Espaciado vertical para que respire */
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
 }
-/* =========================================
-   6. RESPONSIVE (Móvil)
-   ========================================= */
+
+.feature-box i {
+    color: #ef8172;
+}
+
+#features h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+#features p {
+    color: #8f8f8f;
+    width: 80%;
+    margin: 0 auto; /* Centra el texto descriptivo */
+}
+
+.feature-box {
+    padding: 3rem; /* Esto separa las columnas entre sí */
+}
+
+/* RESPONSIVE - MOVIL */
+
 @media (max-width: 991px) {
-    .main-container {
-        padding: 5% 5% !important;
+    .container-fluid {
+        padding: 7% 5% !important;
     }
     .app-name {
         font-size: 1.8rem;
@@ -135,8 +145,7 @@
     }
     .title-image {
         transform: rotate(0deg);
-        max-width: 60%;
-        margin-top: 30px;
+        max-width: 80%;
     }
     .navbar {
         border-radius: 20px;
